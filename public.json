@@ -1,0 +1,94 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "Player A",
+      "position": "RB",
+      "team": "Team X",
+      "pointsPerGame": 18.5,
+      "totalPoints": 222,
+      "injuryStatus": "Healthy"
+    },
+    {
+      "id": 2,
+      "name": "Player B",
+      "position": "WR",
+      "team": "Team Y",
+      "pointsPerGame": 15.2,
+      "totalPoints": 183,
+      "injuryStatus": "Questionable"
+    },
+    {
+      "id": 3,
+      "name": "Player C",
+      "position": "QB",
+      "team": "Team Z",
+      "pointsPerGame": 22.1,
+      "totalPoints": 265,
+      "injuryStatus": "Probable"
+    },
+    // Add more players as needed
+  ],
+  "userPicks": [
+    {
+      "userId": 1,
+      "playerId": 3,
+      "pickedAt": "2024-06-30T12:00:00Z"
+    },
+    {
+      "userId": 2,
+      "playerId": 1,
+      "pickedAt": "2024-06-30T14:30:00Z"
+    },
+    // Add more picks as users make selections
+  ],
+  "recommendations": [
+    {
+      "userId": 1,
+      "recommendedPlayers": [
+        {
+          "id": 2,
+          "name": "Player B",
+          "position": "WR",
+          "team": "Team Y",
+          "pointsPerGame": 15.2,
+          "totalPoints": 183,
+          "injuryStatus": "Questionable"
+        },
+        {
+          "id": 4,
+          "name": "Player D",
+          "position": "TE",
+          "team": "Team W",
+          "pointsPerGame": 12.8,
+          "totalPoints": 154,
+          "injuryStatus": "Healthy"
+        }
+      ]
+    },
+    {
+      "userId": 2,
+      "recommendedPlayers": [
+        {
+          "id": 3,
+          "name": "Player C",
+          "position": "QB",
+          "team": "Team Z",
+          "pointsPerGame": 22.1,
+          "totalPoints": 265,
+          "injuryStatus": "Probable"
+        },
+        {
+          "id": 5,
+          "name": "Player E",
+          "position": "K",
+          "team": "Team V",
+          "pointsPerGame": 8.3,
+          "totalPoints": 100,
+          "injuryStatus": "Healthy"
+        }
+      ]
+    },
+    // Add more recommendations for each user
+  ]
+}

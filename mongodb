@@ -1,0 +1,32 @@
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/fantasyFootball', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Define a schema
+const playerPickSchema = new mongoose.Schema({
+  playerId: { type: String, required: true },
+  playerName: { type: String, required: true },
+  position: { type: String, required: true },
+  draftRound: { type: Number, required: true },
+  team: { type: String, required: true },
+  timestamp: { type: Date, default: Date.now }
+});
+
+// Create a model based on the schema
+const PlayerPick = mongoose.model('PlayerPick', playerPickSchema);
+
+// Example function to save a player pick
+async function savePlayerPick(playerPickData) {
+  try {
+    const playerPick = new PlayerPick(playerPickData);
+    const savedPick = await playerPick.save();
+    console.log('Player pick saved:', savedPick);
+    return savedPick;
+  } catch (error) {
+    console.error('Error saving player pick:', error.message);
+    throw error;
+  }
+}
+
+module.exports = {
+  savePlayerPick
+};
